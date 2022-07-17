@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     Card, CardImg, CardImgOverlay,
-    CardTitle, Breadcrumb, BreadcrumbItem
+    CardTitle, Breadcrumb, BreadcrumbItem, CardBody
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
@@ -46,8 +46,6 @@ const Menu = (props) => {
             <div className="row">
                 {menu}
             </div>
-
-
         </div>
     );
 }

@@ -6,9 +6,31 @@ function About(props) {
 
     const leaders = props.leaders.map((leader) => {
         return (
-            <p>Leader {leader.name}</p>
+            <div key={leader.id} className="col-12 mt-5">
+                <Media className="list-unstyled" tag="li">
+                    <div className="row">
+                        <div className="col-12 col-md-2">
+                            <Media left middle>
+                                <Media object src={leader.image} alt={leader.name} />
+                            </Media>
+                        </div>
+                        <div className="col-12 col-md-10">
+                            <Media body>
+                                <Media heading>{leader.name}</Media>
+                                <p>{leader.designation}</p>
+                                <p>{leader.description}</p>
+                            </Media>
+                        </div>
+                    </div>
+
+                </Media>
+            </div >
         );
     });
+
+
+
+
 
     return (
         <div className="container">
@@ -51,6 +73,7 @@ function About(props) {
                             <blockquote className="blockquote">
                                 <p className="mb-0">You better cut the pizza in four pieces because
                                     I'm not hungry enough to eat six.</p>
+                                <br />
                                 <footer className="blockquote-footer">Yogi Berra,
                                     <cite title="Source Title">The Wit and Wisdom of Yogi Berra,
                                         P. Pepe, Diversion Books, 2014</cite>
