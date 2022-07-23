@@ -52,7 +52,11 @@ class Header extends Component {
                     <Navbar dark expand="md">
                         <div className="container">
                             <NavbarToggler onClick={toggleNav} />
-                            <NavbarBrand className="mr-auto" href="/home"><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
+                            <NavbarBrand className="mr-auto">
+                                <NavLink to='/home'>
+                                    <img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' />
+                                </NavLink>
+                            </NavbarBrand>
                             <Collapse isOpen={this.state.isNavOpen} navbar>
                                 <Nav navbar>
                                     <NavItem>
@@ -64,11 +68,11 @@ class Header extends Component {
                                     <NavItem>
                                         <NavLink className="nav-link" to='/menu'><span className="fa fa-list fa-lg"></span> Menu</NavLink>
                                     </NavItem>
-                                    <NavItem className="ml-auto">
+                                    <NavItem>
                                         <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
                                     </NavItem>
                                 </Nav>
-                                <Nav Navbar>
+                                <Nav navbar className="ml-auto">
                                     <NavItem>
                                         <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
                                     </NavItem>
